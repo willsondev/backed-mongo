@@ -4,8 +4,7 @@ require('dotenv').config();
 const helmet = require('helmet');
 const cors = require('cors');
 const winston = require('winston'); // Para el logging
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json'); // Importa el archivo JSON
+
 
 const authRoutes = require('./routes/auth');
 const classRoutes = require('./routes/classes');
@@ -27,7 +26,7 @@ app.use(express.json());
 app.use(helmet());
 
 // Swagger Documentation Route
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)); // Mueve esta línea después de la inicialización de 'app'
+
 
 // Rutas
 app.use('/api/auth', authRoutes);
