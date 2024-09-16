@@ -1,0 +1,42 @@
+# Ignorar archivos de configuración
+.env
+.env.*
+
+# Ignorar archivos temporales y de compilación
+node_modules
+*.log
+*.tmp
+*.cache
+*.swp
+coverage
+
+# Ignorar archivos específicos de desarrollo
+*.idea
+*.vscode
+
+# Ignorar archivos generados
+dist
+build
+public
+
+# Ignorar archivos de documentación
+*.md
+*.pdf
+*.zip
+
+# Ignorar archivos de sistema
+Thumbs.db
+.DS_Store
+
+# Ignorar archivos de pruebas
+test/fixtures/*
+
+# Ignorar archivos de ejemplos
+examples/*
+
+# Ignorar archivos de configuración de la base de datos
+database.yml
+config.json
+
+# Ignorar archivos de secretos
+secrets.json
