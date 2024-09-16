@@ -1,11 +1,11 @@
 const express = require('express');
 const { body, validationResult } = require('express-validator');
 const router = express.Router();
-const Class = require('../models/Class');
-const { auth, adminAuth } = require('../middleware/auth');
+const Class = require('../../models/Class');
+const { auth, adminAuth } = require('../../middleware/auth');
 
 const sanitizeHtml = require('sanitize-html');
-const User = require('../models/User');
+const User = require('../../models/User');
 
 // Crear una nueva clase
 router.post('/', auth, adminAuth, 

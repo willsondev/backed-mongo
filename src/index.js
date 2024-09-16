@@ -6,10 +6,10 @@ const cors = require('cors');
 const winston = require('winston'); // Para el logging
 
 
-const authRoutes = require('./routes/auth');
-const classRoutes = require('./routes/classes');
-const userRoutes = require('./routes/users'); // Importa la ruta de usuarios
-const { auth, adminAuth } = require('./middleware/auth');
+const authRoutes = require('../routes/auth');
+const classRoutes = require('../routes/classes');
+const userRoutes = require('../routes/users'); // Importa la ruta de usuarios
+const { auth, adminAuth } = require('../middleware/auth');
 
 const app = express(); // Inicializa 'app' antes de usarlo
 const port = process.env.PORT || 5000;
