@@ -1,13 +1,14 @@
 {
   "name": "backend-arqueria",
   "version": "1.0.0",
-  "description": "",
+  "description": "API backend para sistema de reserva de arquería",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Willson Efraín Huenchulao Valdes",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

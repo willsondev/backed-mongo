@@ -40,3 +40,5 @@ config.json
 
 # Ignorar archivos de secretos
 secrets.json
+node_modules/
+.env
