@@ -17,7 +17,7 @@ router.get('/reservations', auth, async (req, res) => {
     const reservations = user.reservations.map(reservation => {
       if (!reservation.classId) {
         // Manejar el error de población
-        console.error(`Clase no encontrada para la reserva ${reservation._id}`);
+        console.error(`Clase no encontrada para la reserva: ${reservation._id}`);
         return {
            ...reservation,
           classId: null,
