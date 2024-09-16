@@ -9,7 +9,7 @@ const winston = require('winston'); // Para el logging
 const authRoutes = require('../src/routes/auth');
 const classRoutes = require('../src/routes/classes');
 const userRoutes = require('../src/routes/users'); // Importa la ruta de usuarios
-const { auth, adminAuth } = require('../middleware/auth');
+const { auth, adminAuth } = require('./middleware/auth');
 
 const app = express(); // Inicializa 'app' antes de usarlo
 const port = process.env.PORT || 5000;

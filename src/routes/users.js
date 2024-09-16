@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../../models/User'); // Importa el modelo de usuario
-const { auth } = require('../../middleware/auth'); // Importa el middleware de autenticación
-const Class = require('../../models/Class'); // Ruta al modelo de clase
+const User = require('../models/User'); // Importa el modelo de usuario
+const { auth } = require('../middleware/auth'); // Importa el middleware de autenticación
+const Class = require('../models/Class'); // Ruta al modelo de clase
 
 // Ruta para obtener el historial de reservas
 router.get('/reservations', auth, async (req, res) => {
