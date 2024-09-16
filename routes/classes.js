@@ -5,7 +5,7 @@ const Class = require('../models/Class');
 const { auth, adminAuth } = require('../middleware/auth');
 
 const sanitizeHtml = require('sanitize-html');
-const User = require('../models/User');
+const User = require('../models/User.js');
 
 // Crear una nueva clase
 router.post('/', auth, adminAuth, 
