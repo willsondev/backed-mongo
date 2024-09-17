@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
+const { auth } = require('../middleware/auth'); 
 
 // Registro de usuario
 router.post('/register', async (req, res) => {
@@ -37,6 +38,15 @@ router.post('/login', async (req, res) => {
         }
         const token = await user.generateToken();
         res.json({ token });
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Obtener información del usuario actual
+router.get('/me', auth, async (req, res) => { // Apply auth middleware here
+    try {
+        res.json(req.user); 
     } catch (error) {
         res.status(500).json({ error: 'Server error' });
     }
